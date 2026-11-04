@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1445358389.svg)](https://doi.org/10.5281/zenodo.23941358)
 # VariantExplainAI
 
 **Allele-aware k-mer CNN–Sparse Transformer for ClinVar pathogenicity prediction**
