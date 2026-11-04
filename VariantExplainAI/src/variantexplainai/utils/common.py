@@ -1,0 +1,25 @@
+from pathlib import Path
+import json, random, os
+import numpy as np
+import torch
+import yaml
+
+def load_config(path):
+    with open(path, encoding='utf-8') as f:
+        return yaml.safe_load(f)
+
+def seed_everything(seed, deterministic=True):
+    random.seed(int(seed)); np.random.seed(int(seed)); torch.manual_seed(int(seed))
+    if torch.cuda.is_available(): torch.cuda.manual_seed_all(int(seed))
+    if deterministic:
+        os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+        torch.use_deterministic_algorithms(True, warn_only=True)
+
+def save_json(path, obj):
+    p=Path(path); p.parent.mkdir(parents=True, exist_ok=True)
+    with open(p,'w',encoding='utf-8') as f: json.dump(obj,f,indent=2,default=lambda x: x.item() if isinstance(x,np.generic) else str(x))
+
+def device_auto(choice='auto'):
+    return torch.device(('cuda' if torch.cuda.is_available() else 'cpu') if choice=='auto' else choice)

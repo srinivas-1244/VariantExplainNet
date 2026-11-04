@@ -1,0 +1,29 @@
+seed: 42
+half_window: 12
+kmer: 5
+embedding_dim: 16
+hidden_dim: 32
+cnn_filters: [16, 32]
+cnn_kernels: [5, 3]
+transformer_layers: 1
+heads: 4
+ff_dim: 64
+local_radius: 4
+global_stride: 8
+max_global_variant_tokens: 8
+dropout: 0.10
+learning_rate: 0.001
+min_learning_rate: 0.00001
+weight_decay: 0.0001
+batch_size: 8
+max_epochs: 2
+patience: 2
+grad_clip: 1.0
+align_weight: 0.20
+ig_steps: 2
+ig_batch_chunk: 1
+align_radius: 3
+max_align_samples_per_batch: 2
+threshold: 0.5
+seeds: [42, 123]
+num_workers: 0
