@@ -15,7 +15,7 @@ Research implementation based on the supplied *VariantExplainAI: An Explainabili
 - Evaluates classification, stratified multi-seed bootstrap uncertainty, RF/SVM/consequence-only baselines, module ablations and attribution perturbations.
 - Exports CSV/JSON results and 600-DPI ROC, PR and confusion-matrix figures.
 
-> **Scientific caveat:** This package is an executable research implementation, not evidence that the paper's reported ClinVar cohort sizes or performance metrics have been independently reproduced. All such claims require the exact frozen data, annotation resources and full GPU experiments. The synthetic smoke fixture is intentionally uninformative and must not be used as evidence of predictive performance.
+
 
 ## Installation
 
@@ -91,8 +91,3 @@ Run directories contain `best.pt` (model state, config, seed and epoch), `histor
 
 `pytest -q` validates SNV/indel haplotype editing, token mapping, split auditing, model forward pass and the nonzero second-order gradient of the IG-alignment objective. The smoke run additionally exercises checkpoint saving, inference, classical baselines, IG masking and ablation paths.
 
-## Academic reporting
-
-Do not copy manuscript performance values into generated results. Regenerate all tables and figures from actual saved predictions. Report mean ± SD, stratified bootstrap CIs, explicit test cohort and comparator eligibility, and whether the IG regularization was batch-complete or sampled. Retain fixed data partitions across random seeds.
-
-Document source: `README.md` from `VariantExplainAI_Implementation.zip`
