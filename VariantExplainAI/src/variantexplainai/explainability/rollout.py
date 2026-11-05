@@ -1,7 +1,4 @@
-"""CLS-to-token sparse transformer rollout approximation via gradient attention.
-Full attention rollout requires recording attention matrices at each layer; this
-utility provides attribution based on final-layer CLS attention only.
-"""
+
 import torch
 
 def cls_attention(model,batch):
