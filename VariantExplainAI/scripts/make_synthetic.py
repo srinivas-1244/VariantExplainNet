@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates an explicitly SYNTHETIC sequence classification fixture; never scientific evidence."""
+
 import argparse,sys
 from pathlib import Path
 import numpy as np
