@@ -1,7 +1,4 @@
-"""Memory-bounded *gathered* sparse attention. No dense T x T attention allocation.
-Each token attends to ±radius neighbors, stride-indexed global positions, CLS and
-per-example mutation tokens. CLS attends to all valid positions.
-"""
+
 import torch
 from torch import nn
 import torch.nn.functional as F
