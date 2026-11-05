@@ -1,4 +1,4 @@
-"""Strict temporal identity filtering: no historical variants reused for prospectively evaluated set."""
+
 def temporal_new_variants(development, later):
     original={r['id'] for r in development}
     new=[r for r in later if r['id'] not in original]
