@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-"""Compare externally supplied variant-level scores on common eligible IDs without leakage claims."""
+
 import argparse,pandas as pd,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
