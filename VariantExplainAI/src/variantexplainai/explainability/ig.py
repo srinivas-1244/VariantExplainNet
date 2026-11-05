@@ -1,6 +1,4 @@
-"""Integrated Gradients along a neutral-sequence-to-observed-embedding path.
-create_graph=True is essential for explanation alignment to train the model.
-"""
+
 import torch
 import torch.nn.functional as F
 
