@@ -389,15 +389,6 @@ For reproducibility, maintain consistent dataset versions, preprocessing
 settings, model configurations, random seeds, and evaluation protocols
 across experiments.
 
-## 14. Intended Applications
 
-VariantExplainAI is designed to support research in:
-
--   Genomic variant pathogenicity prediction.
--   Explainable artificial intelligence for genomics.
--   Computational genomics and bioinformatics.
--   Genetic variant prioritization.
--   Interpretable deep learning for precision medicine.
--   Explainability assessment in genomic prediction systems.
 
 
